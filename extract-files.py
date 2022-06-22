@@ -89,6 +89,10 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libpiex_shim.so'),
     'vendor/lib64/camera/components/com.vidhance.node.eis.so': blob_fixup()
         .replace_needed('libui.so', 'libui-v34.so'),
+    ('vendor/lib64/hw/camera.qcom.so', 'vendor/lib64/libFaceDetectpp-0.5.2.so', 'vendor/lib64/libfacedet.so'): blob_fixup()
+        .replace_needed('libmegface.so', 'libfacedet.so')
+        .replace_needed('libMegviiFacepp-0.5.2.so', 'libFaceDetectpp-0.5.2.so')
+        .replace_needed('megviifacepp_0_5_2_model', 'facedetectpp_0_5_2_model'),
     'vendor/lib64/hw/fingerprint.fpc.default.so': blob_fixup()
         .sig_replace('30 00 00 90 11 3A 42 F9', '30 00 00 90 1F 20 03 D5'),
     ('vendor/lib64/libalAILDC.so', 'vendor/lib64/libalLDC.so', 'vendor/lib64/libalhLDC.so'): blob_fixup()
