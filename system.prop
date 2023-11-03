@@ -7,9 +7,6 @@ persist.sys.cam.skip_detach_image=true
 # CNE
 persist.vendor.cne.feature=1
 
-# Display
-debug.sf.enable_hwc_vds=1
-
 # DPM
 persist.vendor.dpm.feature=11
 
