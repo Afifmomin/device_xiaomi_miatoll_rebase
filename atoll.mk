@@ -52,6 +52,7 @@ $(call soong_config_set_bool,android_hardware_audio,skip_speaker_layout_channel_
 
 # Camera
 $(call soong_config_set_bool,camera,override_format_from_reserved,true)
+$(call soong_config_set,libcameraservice,ext_lib,//$(LOCAL_PATH):libcameraservice_extension.miatoll)
 
 TARGET_BUILD_DEVICE_AS_WEBCAM := true
 
