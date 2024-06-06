@@ -135,6 +135,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.ir-service.example
 
+# Kernel
+LOCAL_KERNEL := device/xiaomi/miatoll-kernel/Image
+PRODUCT_COPY_FILES += \
+	$(LOCAL_KERNEL):kernel
+
 # Lineage Health
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
