@@ -213,8 +213,24 @@ do
 done
 
 # cpuset parameters
-echo 0-5 > /dev/cpuset/background/cpus
-echo 0-5 > /dev/cpuset/system-background/cpus
+echo 0-7 > /dev/cpuset/top-app/cpus
+echo 0-5,7 > /dev/cpuset/foreground/cpus
+echo 4-5 > /dev/cpuset/background/cpus
+echo 2-5 > /dev/cpuset/system-background/cpus
+echo 2-5 > /dev/cpuset/restricted/cpus
+
+# schedtune parameters
+echo 1 > /dev/stune/foreground/schedtune.prefer_idle
+echo 1 > /dev/stune/top-app/schedtune.prefer_idle
+echo 5 > /dev/stune/top-app/schedtune.boost
+
+# EAS
+echo 95 > /proc/sys/kernel/sched_upmigrate
+echo 85 > /proc/sys/kernel/sched_downmigrate
+
+# Enable schedutil predicted-load boosting
+echo 1 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/pl
+echo 1 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/pl
 
 # Turn off scheduler boost at the end
 echo 0 > /proc/sys/kernel/sched_boost
