@@ -733,6 +733,25 @@ vendor/etc/seccomp_policy/codec2.vendor.base.policy|05b0779b5da2ea640984d46a46a7
 vendor/etc/seccomp_policy/codec2.vendor.ext.policy|6a9a9eb3261048f02805261568097410e1a23b2d
 vendor/lib/libqcodec2.so|01b1f94e7d17c5616635141ff7bc5e3f304b48f0
 
+# MiSys
+vendor/bin/hw/vendor.xiaomi.hardware.misys@1.0-service
+vendor/bin/hw/vendor.xiaomi.hardware.misys@2.0-service
+vendor/bin/hw/vendor.xiaomi.hardware.misys@3.0-service
+vendor/etc/init/vendor.xiaomi.hardware.misys@1.0-service.rc
+vendor/etc/init/vendor.xiaomi.hardware.misys@2.0-service.rc
+vendor/etc/init/vendor.xiaomi.hardware.misys@3.0-service.rc
+vendor/etc/vintf/manifest/vendor.xiaomi.hardware.misys@1.0.xml
+vendor/etc/vintf/manifest/vendor.xiaomi.hardware.misys@2.0.xml
+vendor/etc/vintf/manifest/vendor.xiaomi.hardware.misys@3.0.xml
+vendor/lib64/hw/vendor.xiaomi.hardware.misys@1.0-impl.so
+vendor/lib64/hw/vendor.xiaomi.hardware.misys@2.0-impl.so
+vendor/lib64/hw/vendor.xiaomi.hardware.misys@3.0-impl.so
+vendor/lib64/libcheckpid.so
+vendor/lib64/liblogwrap_vendor.so
+vendor/lib64/vendor.xiaomi.hardware.misys@1.0.so
+vendor/lib64/vendor.xiaomi.hardware.misys@2.0.so
+vendor/lib64/vendor.xiaomi.hardware.misys@3.0.so
+
 # Neural Networks
 vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti
 vendor/bin/npu_launcher
