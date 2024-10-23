@@ -202,6 +202,10 @@ ro.hardware.keystore_desede=true
 # Netflix
 ro.netflix.bsp_rev=Q6250-19132-1
 
+# HWUI
+debug.hwui.use_hint_manager=true
+debug.hwui.target_cpu_time_percent=30
+
 # Media
 debug.stagefright.c2inputsurface=-1
 vendor.video.disable.ubwc=1
