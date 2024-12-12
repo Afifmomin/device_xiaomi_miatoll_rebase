@@ -55,6 +55,10 @@ PRODUCT_PACKAGES += \
 # DebugFS
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
+# Device-specific settings
+PRODUCT_PACKAGES += \
+    DSPVolumeSynchronizer
+
 # Display
 $(call soong_config_set,qtidisplay,gralloc_handle_has_reserved_size,true)
 
