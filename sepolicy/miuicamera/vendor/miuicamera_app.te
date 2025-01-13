@@ -1,3 +1,7 @@
+binder_use(miuicamera_app)
+binder_call(miuicamera_app, hal_camera_default)
+binder_call(miuicamera_app, hal_camerapostproc_xiaomi)
+
 type miuicamera_app, domain, coredomain;
 
 app_domain(miuicamera_app)
@@ -14,8 +18,16 @@ allow miuicamera_app {
 
 dontaudit miuicamera_app radio_service:service_manager find;
 
+allow miuicamera_app adsprpcd_file:dir { open read search };
+allow miuicamera_app vendor_xdsp_device:chr_file { ioctl open read write };
+allow miuicamera_app vendor_qdsp_device:chr_file { ioctl open read write };
 allow miuicamera_app hal_camerapostproc_xiaomi_hwservice:hwservice_manager find;
 allow miuicamera_app hal_misys_hwservice:hwservice_manager find;
 allow miuicamera_app privapp_data_file:file execute;
-allow miuicamera_app vendor_camera_data_file:dir search;
-allow miuicamera_app vendor_camera_data_file:file r_file_perms;
+allow miuicamera_app vendor_camera_data_file:dir { append map search r_dir_perms write };
+allow miuicamera_app vendor_camera_data_file:file { getattr open read };
+
+# Properties
+get_prop(miuicamera_app, vendor_audio_prop)
+get_prop(miuicamera_app, vendor_display_prop)
+get_prop(miuicamera_app, vendor_fingerprint_prop)

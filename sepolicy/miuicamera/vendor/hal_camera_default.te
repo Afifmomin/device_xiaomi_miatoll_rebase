@@ -1,1 +1,14 @@
+attribute hal_camerapostproc_xiaomi;
+attribute hal_camerapostproc_xiaomi_client;
+attribute hal_camerapostproc_xiaomi_server;
+
+hal_server_domain(hal_camera_default, hal_camerapostproc_xiaomi)
+allow hal_camera_client hal_camerapostproc_xiaomi_hwservice:hwservice_manager find;
+add_hwservice(hal_camera_server, hal_camerapostproc_xiaomi_hwservice)
+
+binder_call(hal_camerapostproc_xiaomi_client, hal_camerapostproc_xiaomi_server)
+binder_call(hal_camerapostproc_xiaomi_server, hal_camerapostproc_xiaomi_client)
+
 binder_call(hal_camera_default, platform_app)
+
+dontaudit hal_camera_default default_prop:file read;
