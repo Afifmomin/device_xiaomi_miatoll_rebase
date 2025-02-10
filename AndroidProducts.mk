@@ -1,8 +1,7 @@
-# Device tree for Xiaomi SD720G Devices
-
-```
 #
 # SPDX-FileCopyrightText: The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
 #
-```
+
+PRODUCT_MAKEFILES := \
+    $(LOCAL_DIR)/lineage_miatoll.mk
