@@ -3,3 +3,9 @@ allow platform_app {
 }:hwservice_manager find;
 
 hal_client_domain(platform_app, hal_camerapostproc_xiaomi)
+
+allow platform_app app_data_file:file execute;
+allow platform_app audio_config_prop:file { getattr map open read };
+allow platform_app cgroup:file { open read };
+allow platform_app hal_camera_default:binder { call transfer };
+allow platform_app vendor_default_prop:file { getattr map };

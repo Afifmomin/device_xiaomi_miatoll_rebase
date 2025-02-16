@@ -12,3 +12,6 @@ binder_call(hal_camerapostproc_xiaomi_server, hal_camerapostproc_xiaomi_client)
 binder_call(hal_camera_default, platform_app)
 
 dontaudit hal_camera_default default_prop:file read;
+
+allow hal_camera_default platform_app:binder { call transfer };
+allow hal_camera_default proc_stat:file { open read };
