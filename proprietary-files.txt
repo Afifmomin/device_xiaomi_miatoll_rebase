@@ -752,6 +752,22 @@ vendor/lib64/vendor.xiaomi.hardware.misys@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.misys@2.0.so
 vendor/lib64/vendor.xiaomi.hardware.misys@3.0.so
 
+# MiuiCamera
+system/lib64/libcamera_algoup_jni.xiaomi.so;SYMLINK=system/system/priv-app/MiuiCamera/lib/arm64/libcamera_algoup_jni.xiaomi.so|116a0c7c3ff1a717664d41f722dc3b15c976f7be|7ef903ad31092501b1cb72cb7e740c4d1dd96c2a
+system/lib64/libcamera_mianode_jni.xiaomi.so;SYMLINK=system/system/priv-app/MiuiCamera/lib/arm64/libcamera_mianode_jni.xiaomi.so|67ccf23811282e9a20b8e90199eb6c6a95d3cf6d|41d1982d6cfdd73c2bea94ba9b8d5ea69a154143
+
+# MiuiExtraPhoto
+system/lib64/libdoc_photo.so;SYMLINK=system/system/priv-app/MiuiExtraPhoto/lib/arm64/libdoc_photo.so;FIX_SONAME|e09aa3436d3fe1a6e4b37d9a922eae0a78d1760e|54550ce4de14489b6a656700688e94b63eb308b6
+system/lib64/libdoc_photo_c++_shared.so;SYMLINK=system/system/priv-app/MiuiExtraPhoto/lib/arm64/libdoc_photo_c++_shared.so;FIX_SONAME|8bd494c3b1da5d250e0dc81231ea094fd0bccf88|c9a533f8f07e6206ae6b0c3b9ec7c0fe389d2bb9
+system/lib64/libgallery_arcsoft_dualcam_refocus.so;SYMLINK=system/system/priv-app/MiuiExtraPhoto/lib/arm64/libgallery_arcsoft_dualcam_refocus.so;FIX_SONAME|997707dfb7f3a25a590b9cf939866c33f7993c2f|f58b00405768c3c14744804bd63e6b5cf0cfb3ac
+system/lib64/libgallery_arcsoft_portrait_lighting.so;SYMLINK=system/system/priv-app/MiuiExtraPhoto/lib/arm64/libgallery_arcsoft_portrait_lighting.so;FIX_SONAME|ead416a93697dd0f1f2f2c51ea7394c68ee93866|00eafffa63dea0093c58bb9352632ff0784eaea1
+system/lib64/libgallery_arcsoft_portrait_lighting_c.so;SYMLINK=system/system/priv-app/MiuiExtraPhoto/lib/arm64/libgallery_arcsoft_portrait_lighting_c.so;FIX_SONAME|1626140cfbed201600f5877b67276d29bb383f12|abbe14100a40425c5f9e39f1c699b5bfb7ed9b8a
+system/lib64/libgallery_mpbase.so;SYMLINK=system/system/priv-app/MiuiExtraPhoto/lib/arm64/libgallery_mpbase.so;FIX_SONAME|bcc870d7a6604a69dfe2d0b31e924d3740d1d639|da776d5f3d19b1abfaf8a391f783b9daad16c33f
+system/lib64/libmibokeh_gallery.so;SYMLINK=system/system/priv-app/MiuiExtraPhoto/lib/arm64/libmibokeh_gallery.so|68449a8a4616b4ff331ea2364373d2e687bdeb0c
+system/lib64/librefocus.so;SYMLINK=system/system/priv-app/MiuiExtraPhoto/lib/arm64/librefocus.so;DISABLE_DEPS|6ed7d0072be06ff0c43484c7533dcef5b2a6301a
+system/lib64/librefocus_mibokeh.so;SYMLINK=system/system/priv-app/MiuiExtraPhoto/lib/arm64/librefocus_mibokeh.so|fd3db9b91b9c6bb583fa54fccdd086ecccfd750b
+system/priv-app/MiuiExtraPhoto/MiuiExtraPhoto.apk|f195626fcc97904aa858e50d0746d091263fefa7
+
 # Neural Networks
 vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti
 vendor/bin/npu_launcher

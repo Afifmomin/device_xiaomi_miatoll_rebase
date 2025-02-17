@@ -60,6 +60,9 @@ PRODUCT_PACKAGES += \
 
 $(call soong_config_set,camera,override_format_from_reserved,true)
 
+# Camera (Shim MiuiCamera libs)
+PRODUCT_PACKAGES += libgui_shim_miuicamera
+
 # DebugFS
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 

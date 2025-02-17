@@ -123,6 +123,12 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libinput_shim.so'),
     'system_ext/lib64/libwfdservice.so': blob_fixup()
         .replace_needed('android.media.audio.common.types-V2-cpp.so', 'android.media.audio.common.types-V4-cpp.so'),
+    ### Miui Camera fix Start ###
+    ('system/lib64/libcamera_algoup_jni.xiaomi.so',
+    'system/lib64/libcamera_mianode_jni.xiaomi.so'): blob_fixup()
+        .patchelf_version('0_17_2')
+        .add_needed('libgui_shim_miuicamera.so'),
+    ### Miui Camera fix End ###
 }  # fmt: skip
 
 module = ExtractUtilsModule(
