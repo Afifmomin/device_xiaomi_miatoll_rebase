@@ -53,6 +53,14 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.qti.hardware.fm@1.0',
         'vendor.qti.hardware.wifidisplaysession@1.0',
         'vendor.qti.imsrtpservice@3.0',
+        'libmpbase',
+        'libOpenCL',
+        'libarcsoft_dualcam_refocus',
+        'libarcsoft_dualcam_refocus_front',
+        'libarcsoft_dualcam_refocus_rear_t',
+        'libarcsoft_dualcam_refocus_rear_w',
+        'libarcsoft_portrait_lighting',
+        'libarcsoft_portrait_lighting_c',
     ): lib_fixup_vendor_suffix,
 }
 

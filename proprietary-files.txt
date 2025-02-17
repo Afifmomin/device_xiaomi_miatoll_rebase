@@ -132,12 +132,12 @@ vendor/lib64/libarcsoft_bodyslim.so
 vendor/lib64/libarcsoft_distortion_correction.so
 vendor/lib64/libarcsoft_dualcam_image_optical_zoom.so
 vendor/lib64/libarcsoft_dualcam_optical_zoom_control.so
-vendor/lib64/libarcsoft_dualcam_refocus.so
-vendor/lib64/libarcsoft_dualcam_refocus_front.so
-vendor/lib64/libarcsoft_dualcam_refocus_rear_t.so
-vendor/lib64/libarcsoft_dualcam_refocus_rear_w.so
-vendor/lib64/libarcsoft_portrait_lighting.so
-vendor/lib64/libarcsoft_portrait_lighting_c.so
+vendor/lib64/libarcsoft_dualcam_refocus.so;MODULE_SUFFIX=_vendor
+vendor/lib64/libarcsoft_dualcam_refocus_front.so;MODULE_SUFFIX=_vendor
+vendor/lib64/libarcsoft_dualcam_refocus_rear_t.so;MODULE_SUFFIX=_vendor
+vendor/lib64/libarcsoft_dualcam_refocus_rear_w.so;MODULE_SUFFIX=_vendor
+vendor/lib64/libarcsoft_portrait_lighting.so;MODULE_SUFFIX=_vendor
+vendor/lib64/libarcsoft_portrait_lighting_c.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libarcsoft_preview_deflicker.so
 vendor/lib64/libarcsoft_supernight.so
 vendor/lib64/libbeauty_face_interface.so
@@ -161,7 +161,7 @@ vendor/lib64/libmialgo_sd.so
 vendor/lib64/libmialgo_utils.so
 vendor/lib64/libmialgoengine.so
 vendor/lib64/libmibokeh_712.so
-vendor/lib64/libmpbase.so
+vendor/lib64/libmpbase.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libremosaic_wrapper.so
 vendor/lib64/libremosaiclib.so
 vendor/lib64/libsdk_sr.so
@@ -537,7 +537,7 @@ vendor/lib/egl/libq3dtools_esx.so|9867de833bfe301c74f16e85727c4699c82f12ca
 vendor/lib/hw/vulkan.adreno.so|0b3646a7ae3520540a179f2c9a40ec1a2e77a4d6
 vendor/lib/libC2D2.so|bf22239cc4a003a6cd1b3e273f60dc37e4d51730
 vendor/lib/libCB.so|4af7c81bfbb963a3e5f0185225febc7294a3e262
-vendor/lib/libOpenCL.so|a8a3952c475cf214fec74c324e540ee800ee9727
+vendor/lib/libOpenCL.so;MODULE_SUFFIX=_vendor|a8a3952c475cf214fec74c324e540ee800ee9727
 vendor/lib/libVkLayer_q3dtools.so|c9953ac8a64b9b9a31173c56812bead633a7d379
 vendor/lib/libadreno_app_profiles.so|4ad675ed078d0c859fbd82ba32b16acfb00c3447
 vendor/lib/libadreno_utils.so|5ba9896da9133e56ed047612c20add450005cd6f
@@ -555,7 +555,7 @@ vendor/lib64/egl/libq3dtools_esx.so|369be2b63d588d6ca58e5e37f112d77439592510
 vendor/lib64/hw/vulkan.adreno.so|d72b4df1d27a5e3b3c900ab10feaddb6198381b4
 vendor/lib64/libC2D2.so|21a3b027b0857ee910f9db3e7558f35aafaadef5
 vendor/lib64/libCB.so|9fc3275f8d5df3d2856892e76037c9f08fddb9f4
-vendor/lib64/libOpenCL.so|688a3a5f3fbece3eddc031e326aa0e3a7e58a091
+vendor/lib64/libOpenCL.so;MODULE_SUFFIX=_vendor|688a3a5f3fbece3eddc031e326aa0e3a7e58a091
 vendor/lib64/libVkLayer_q3dtools.so|5ddfe2401db02f851d6472a7ba57c5fc67923675
 vendor/lib64/libadreno_app_profiles.so|26b8f09515c6b8b30a2c6d250434af6f874ced4e
 vendor/lib64/libadreno_utils.so|7926cc277864b39a99d85777d110adb50a3c7d15
@@ -767,6 +767,16 @@ system/lib64/libmibokeh_gallery.so;SYMLINK=system/system/priv-app/MiuiExtraPhoto
 system/lib64/librefocus.so;SYMLINK=system/system/priv-app/MiuiExtraPhoto/lib/arm64/librefocus.so;DISABLE_DEPS|6ed7d0072be06ff0c43484c7533dcef5b2a6301a
 system/lib64/librefocus_mibokeh.so;SYMLINK=system/system/priv-app/MiuiExtraPhoto/lib/arm64/librefocus_mibokeh.so|fd3db9b91b9c6bb583fa54fccdd086ecccfd750b
 system/priv-app/MiuiExtraPhoto/MiuiExtraPhoto.apk|f195626fcc97904aa858e50d0746d091263fefa7
+
+# MiuiExtraPhoto (dependencies)
+vendor/lib64/libmpbase.so:system/lib64/libmpbase.so;MODULE_SUFFIX=_system|e6b51e2d501f434eea15ecdc275011d1498301ae
+vendor/lib64/libOpenCL.so:system/lib64/libOpenCL.so;MODULE_SUFFIX=_system|2fe1abc3b202e5b70bcf2ad7870721b0a9ddb81b
+vendor/lib64/libarcsoft_dualcam_refocus.so:system/lib64/libarcsoft_dualcam_refocus.so;MODULE_SUFFIX=_system|cd52db63782faea7f8200d6b39d71c68e1818ced
+vendor/lib64/libarcsoft_dualcam_refocus_front.so:system/lib64/libarcsoft_dualcam_refocus_front.so;MODULE_SUFFIX=_system|fc8c1413fde708a33ab6bda67f3e40f8a4e1abd6
+vendor/lib64/libarcsoft_dualcam_refocus_rear_t.so:system/lib64/libarcsoft_dualcam_refocus_rear_t.so;MODULE_SUFFIX=_system|dcc29a2f40f8174875a4247df08be1068ffc2697
+vendor/lib64/libarcsoft_dualcam_refocus_rear_w.so:system/lib64/libarcsoft_dualcam_refocus_rear_w.so;MODULE_SUFFIX=_system|5cbeb9bef2f37a731d8daee473b784bfeb19cd84
+vendor/lib64/libarcsoft_portrait_lighting.so:system/lib64/libarcsoft_portrait_lighting.so;MODULE_SUFFIX=_system|1bc7b14fe69e617529e4dda74e4ef1081ea2ada0
+vendor/lib64/libarcsoft_portrait_lighting_c.so:system/lib64/libarcsoft_portrait_lighting_c.so;MODULE_SUFFIX=_system|ca42fa6fc25e231ca70e1caf80a08b18ccfd3d99
 
 # Neural Networks
 vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti
