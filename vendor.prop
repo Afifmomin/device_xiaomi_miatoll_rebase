@@ -180,6 +180,9 @@ persist.vendor.fingerprint.sensor_location=1080|760|100|local:463094658031754841
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
+# FS-verity
+ro.apk_verity.mode=2
+
 # Incremental FS
 ro.incremental.enable=true
 
