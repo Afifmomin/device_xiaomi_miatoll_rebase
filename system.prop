@@ -1,6 +1,12 @@
 # Audio
 audio.offload.min.duration.secs=30
 
+# system prop for infinity
+ro.infinity.soc=Snapdragon 720G
+ro.infinity.battery=5020mAh
+ro.infinity.display=1080 x 2400 60Hz
+ro.infinity.camera=64/48MP + 8MP + 5MP + 2MP
+
 # Camera
 persist.sys.cam.skip_detach_image=true
 
